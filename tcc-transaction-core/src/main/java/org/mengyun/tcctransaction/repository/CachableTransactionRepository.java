@@ -43,7 +43,7 @@ public abstract class CachableTransactionRepository implements TransactionReposi
                 throw new OptimisticLockException();
             }
         } finally {
-            if (result <= 0) {
+            if (result <= 0) {// 更新失败，移除缓存。下次访问，从存储器读取
                 removeFromCache(transaction);
             }
         }
