@@ -6,7 +6,9 @@ import java.util.Date;
  * Created by cheng.zeng on 2016/9/2.
  */
 public class TransactionVo {
-
+    /**
+     * 领域
+     */
     private String domain;
 
     private String globalTxId;
