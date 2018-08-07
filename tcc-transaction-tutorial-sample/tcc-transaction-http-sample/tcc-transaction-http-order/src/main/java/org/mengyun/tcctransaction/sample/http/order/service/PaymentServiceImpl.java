@@ -52,7 +52,7 @@ public class PaymentServiceImpl {
 
 
         try {
-            Thread.sleep(1000l);
+            Thread.sleep(1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -72,7 +72,7 @@ public class PaymentServiceImpl {
 
 
         try {
-            Thread.sleep(1000l);
+            Thread.sleep(1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

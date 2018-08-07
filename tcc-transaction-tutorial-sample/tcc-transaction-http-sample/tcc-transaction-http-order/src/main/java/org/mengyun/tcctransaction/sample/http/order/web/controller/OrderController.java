@@ -101,13 +101,13 @@ public class OrderController {
         String payResultTip = null;
         Order foundOrder = orderService.findOrderByMerchantOrderNo(merchantOrderNo);
 
-        if ("CONFIRMED".equals(foundOrder.getStatus()))
+        if ("CONFIRMED".equals(foundOrder.getStatus())) {
             payResultTip = "支付成功";
-        else if ("PAY_FAILED".equals(foundOrder.getStatus()))
+        } else if ("PAY_FAILED".equals(foundOrder.getStatus())) {
             payResultTip = "支付失败";
-        else
+        } else {
             payResultTip = "Unknown";
-
+        }
         mv.addObject("payResult", payResultTip);
 
         mv.addObject("capitalAmount", accountService.getCapitalAccountByUserId(foundOrder.getPayerUserId()));
